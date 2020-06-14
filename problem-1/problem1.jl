@@ -13,3 +13,10 @@ function sum_multiples_of_3_5(n)
 end
 
 println(sum_multiples_of_3_5(1000))
+
+function sum_divisible_by(p)
+    k = 999 ÷ p
+    return p * k * (k + 1) ÷ 2
+end
+
+println(sum_divisible_by(3) + sum_divisible_by(5) - sum_divisible_by(15))
