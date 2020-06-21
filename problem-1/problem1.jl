@@ -3,10 +3,10 @@
 # Solution 1
 function sum_multiples_of_3_5(limit)
     sum = 0
-    for i = 1:(limit-1)÷3
+    for i in 1:(limit-1)÷3
         sum += 3 * i
     end
-    for i = 1:(limit-1)÷5
+    for i in 1:(limit-1)÷5
         if i % 3 == 0 continue end
         sum += 5 * i
     end

@@ -4,7 +4,7 @@
 function largest_prime_factor(n)
     if n <= 2 return n end
     if n % 2 == 0 return largest_prime_factor(n ÷ 2) end
-    for p = 3:2:isqrt(n)
+    for p in 3:2:isqrt(n)
         if n % p == 0 return largest_prime_factor(n ÷ p) end
     end
     return n
@@ -18,7 +18,7 @@ function largest_prime_factor(n)
     while n % 2 == 0
         n ÷= 2 
     end
-    for p = 3:2:isqrt(n)
+    for p in 3:2:isqrt(n)
         if n % p == 0 largest_p = p end
         while n % p == 0
             n ÷= p

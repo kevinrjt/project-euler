@@ -10,7 +10,7 @@ end
 # Solution 1
 function smallest_multiple(n)
     multiple = 1
-    for x = 2:n
+    for x in 2:n
         multiple *= x ÷ gcd(multiple, x)
     end
     return multiple
@@ -23,7 +23,7 @@ function smallest_multiple(n)
     primes = [2 3 5 7 11 13 17 19]
     limit = floor(Int, sqrt(n))
     multiple = 1
-    for p = primes
+    for p in primes
         if p > n break end
         a = if p <= limit floor(Int, log(n) / log(p)) else 1 end
         multiple *= p ^ a

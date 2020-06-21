@@ -16,8 +16,8 @@ end
 # Solution 1
 function largest_palindrome()
     max_palindrome = 0
-    for x = 999:-1:100
-        for y = 999:-1:x
+    for x in 999:-1:100
+        for y in 999:-1:x
             n = x * y
             if n <= max_palindrome break end
             if is_palindrome(n)
@@ -34,9 +34,9 @@ println(largest_palindrome())
 function largest_palindrome()
     # max_palindrome is 6 digits since 111111 == 143×777, and then can be divided by 11.
     max_palindrome = 0
-    for x = 999:-1:100
+    for x in 999:-1:100
         y1, dy = if x % 11 == 0 (999, 1) else (990, 11) end
-        for y = y1:-dy:x
+        for y in y1:-dy:x
             n = x * y
             if n <= max_palindrome break end
             if is_palindrome(n)
