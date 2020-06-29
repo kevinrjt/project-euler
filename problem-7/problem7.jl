@@ -1,7 +1,7 @@
 # https://projecteuler.net/problem=7
 
 function is_prime(primes, candidate)
-    limit = floor(Int, sqrt(candidate))
+    limit = isqrt(candidate)
     for p in primes
         if p > limit return true end
         if candidate % p == 0 return false end

@@ -21,7 +21,7 @@ println(smallest_multiple(20))
 # Solution 2
 function smallest_multiple(n)
     primes = [2 3 5 7 11 13 17 19]
-    limit = floor(Int, sqrt(n))
+    limit = isqrt(n)
     multiple = 1
     for p in primes
         if p > n break end

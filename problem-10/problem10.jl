@@ -4,7 +4,7 @@
 function primes_below(n)
     primes = []
     is_prime = trues(n)
-    limit = floor(Int, sqrt(n-1))
+    limit = isqrt(n-1)
     for i in 2:n-1
         if is_prime[i]
             append!(primes, i)
@@ -25,7 +25,7 @@ function primes_below(n)
     primes = [2]
     m = (n - 2) ÷ 2
     is_prime = trues(m)
-    limit = (floor(Int, sqrt(n-1)) - 1) ÷ 2
+    limit = (isqrt(n-1) - 1) ÷ 2
     for k in 1:m
         if is_prime[k]
             append!(primes, 2k + 1)
