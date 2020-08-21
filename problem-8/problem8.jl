@@ -8,6 +8,12 @@ function read_input(file)
     return input
 end
 
+# Solution 1: brute force
+function largest_product(a, k)
+    return maximum(s -> prod(a[s+1:s+k]), 0:length(a)-k)
+end
+
+# Solution 2
 function largest_product(a, k)
     max_product = 0
     n = length(a)
