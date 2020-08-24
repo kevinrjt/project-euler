@@ -17,8 +17,9 @@ function primes_below(n)
     return primes
 end
 
-primes = primes_below(2000000)
-println(sum(primes))
+@time answer = sum(primes_below(2000000))
+
+println(answer)
 
 # Solution 2: saves half memory
 function primes_below(n)
@@ -38,5 +39,6 @@ function primes_below(n)
     return primes
 end
 
-primes = primes_below(2000000)
-println(sum(primes))
+@time answer = sum(primes_below(2000000))
+
+println(answer)
